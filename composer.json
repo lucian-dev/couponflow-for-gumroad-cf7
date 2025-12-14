@@ -1,0 +1,22 @@
+{
+  "name": "lucian-dev/couponflow-for-gumroad-cf7",
+  "description": "Generate Gumroad coupon codes automatically from Contact Form 7 submissions.",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "CF7Gumroad\\": "src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "echo 'Autoload updated for CF7Gumroad'"
+    ]
+  }
+}

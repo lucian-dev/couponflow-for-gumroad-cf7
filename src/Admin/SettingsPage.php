@@ -92,7 +92,7 @@ class SettingsPage {
             <button type="button" class="button" id="cf7g_check_connection" data-form="<?php echo esc_attr( $form_id ); ?>" data-nonce="<?php echo esc_attr( $check_nonce ); ?>" <?php disabled( empty( $token ) ); ?>>
               <?php esc_html_e( 'Check Connection', 'couponflow-for-gumroad-cf7' ); ?>
             </button>
-            <button type="button" class="button" id="cf7g_reset_connection" data-nonce="<?php echo esc_attr( $reset_nonce ); ?>" <?php disabled( empty( $token ) ); ?> style="margin-left:6px;">
+            <button type="button" class="button" id="cf7g_reset_connection" data-form="<?php echo esc_attr( $form_id ); ?>" data-nonce="<?php echo esc_attr( $reset_nonce ); ?>" <?php disabled( empty( $token ) ); ?> style="margin-left:6px;">
               <?php esc_html_e( 'Reset Connection', 'couponflow-for-gumroad-cf7' ); ?>
             </button>
           </td>

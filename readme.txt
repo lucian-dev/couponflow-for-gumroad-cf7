@@ -49,7 +49,7 @@ No. The plugin works independently - it only adds an extra "Gumroad Coupons" tab
 Yes. Your access token is stored only in WordPress meta, sanitized, and never exposed on the front end or in emails. You can also see here how you generate one (https://gumroad.com/help/article/280-create-application-api).
 
 = Does it work with multiple forms? =
-Yes. You can connect multiple Contact Form 7 forms to different Gumroad products. Each form has its own coupon settings and logs.
+Yes. You can connect multiple Contact Form 7 forms to different Gumroad products. Each form has its own connection, coupon settings and logs.
 
 == Screenshots ==
 1. Connect to your Gumroad account via Access Token.

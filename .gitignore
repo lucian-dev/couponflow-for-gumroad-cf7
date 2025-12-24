@@ -3,3 +3,4 @@ composer.lock
 .idea
 changelog.txt
 .git
+/.vscode

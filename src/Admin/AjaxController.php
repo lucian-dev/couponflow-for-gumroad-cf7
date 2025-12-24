@@ -1,5 +1,4 @@
 <?php
-
 /**
  * AJAX endpoints for the CF7 Gumroad admin (authenticated, wp-admin only).
  * 
@@ -71,28 +70,17 @@ class AjaxController {
 	// AJAX: reset Gumroad connection (clear token).
 	public static function reset_connection(): void {
 		check_ajax_referer( 'cf7g_reset_connection', 'nonce' );
-
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( __( 'Unauthorized.', 'couponflow-for-gumroad-cf7' ), 403 );
 		}
 
-		// Delete all tokens from all CF7 forms.
-		$forms = get_posts(
-			array(
-				'post_type'      => 'wpcf7_contact_form',
-				'posts_per_page' => -1,
-				'fields'         => 'ids',
-			)
-		);
+    $form_id = isset( $_POST['form_id'] ) ? absint( $_POST['form_id'] ) : 0;
+    if ( ! $form_id ) {
+      wp_send_json_error( array( 'message' => __( 'Invalid form.', 'couponflow-for-gumroad-cf7' ) ), 400 ); 
+    }
 
-		if ( empty( $forms ) || ! is_array( $forms ) ) {
-			wp_send_json_error( array( 'message' => __( 'No forms found to reset.', 'couponflow-for-gumroad-cf7' ) ) );
-		}
-
-		foreach ( $forms as $form_id ) {
-			delete_post_meta( $form_id, '_cf7g_gumroad_settings' );
-			delete_post_meta( $form_id, '_cf7g_coupon_log' );
-		}
+    delete_post_meta( $form_id, '_cf7g_gumroad_settings' );
+    delete_post_meta( $form_id, '_cf7g_coupon_log' );
 
 		$user_key = 'cf7g_notice_' . get_current_user_id();
 		set_transient( $user_key, __( '🔄 Gumroad connection has been reset.', 'couponflow-for-gumroad-cf7' ), 15 );

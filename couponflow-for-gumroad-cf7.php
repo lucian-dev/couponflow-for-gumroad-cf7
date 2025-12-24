@@ -33,14 +33,6 @@ define( 'CGC_URL', plugin_dir_url( __FILE__ ) );
 
 // Check for Composer autoload.
 if ( ! file_exists( CGC_PATH . 'vendor/autoload.php' ) ) {
-  add_action(
-    'admin_notices',
-		static function () {
-      echo '<div class="notice notice-error"><p>'
-			. esc_html__( 'CouponFlow for Gumroad with Contact Form 7: Composer autoload not found. Run "composer install".', 'couponflow-for-gumroad-cf7' )
-			. '</p></div>';
-		}
-	);
   return;
 }
 // Load Composer autoload.
@@ -67,7 +59,7 @@ add_action(
 		}
 
 		// Contact-Form-7 required.
-		if ( ! class_exists( 'WPCF7' ) ) {
+		if ( ! class_exists( 'WPCF7' ) && is_admin() ) {
 			add_action(
 				'admin_notices',
 				static function () {

@@ -48,6 +48,7 @@
     $resetBtn.on('click', function (e) {
       e.preventDefault();
       const nonce = $(this).data('nonce');
+      const formId = $(this).data('form');
 
       if (!confirm('Are you sure you want to reset your Gumroad connection?')) {
         return;
@@ -58,6 +59,7 @@
       $.post(CGC.ajax, {
         action: 'cf7g_reset_connection',
         nonce: nonce,
+        form_id: formId,
       })
         .done(function (res) {
           showSpinner($resetBtn, false);

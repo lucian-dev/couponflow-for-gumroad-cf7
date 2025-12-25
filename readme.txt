@@ -56,6 +56,31 @@ Yes. You can connect multiple Contact Form 7 forms to different Gumroad products
 2. Configure your coupon settings. Choose your Gumroad product and customize how your discount codes are generated.
 3. Add the coupon to your autoresponder. Send each user their unique Gumroad discount code automatically after submission.
 
+== External services ==
+
+This plugin connects to the Gumroad API to generate and manage discount coupon codes for Gumroad products.
+
+The connection is required to:
+- Validate the user’s Gumroad access token
+- Retrieve the list of Gumroad products
+- Generate unique coupon codes for a selected product
+
+### What data is sent
+- The Gumroad access token entered by the site administrator
+- Product ID, coupon configuration (discount, usage limit)
+
+### When data is sent
+- When the administrator clicks “Check Connection” in the Contact Form 7 editor
+- When a form submission triggers coupon generation
+
+No data is sent without explicit administrator action or a form submission.
+
+### Service provider
+This service is provided by Gumroad, Inc.
+
+Terms of Service: https://gumroad.com/terms  
+Privacy Policy: https://gumroad.com/privacy
+
 == Changelog ==
 
 = 1.0.0 =

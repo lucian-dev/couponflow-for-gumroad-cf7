@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CF7Gumroad\\' => array($baseDir . '/src'),
+    'CouponFlow\\CF7Gumroad\\' => array($baseDir . '/src'),
 );

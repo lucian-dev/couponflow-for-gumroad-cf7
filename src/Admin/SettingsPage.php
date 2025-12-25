@@ -3,12 +3,12 @@
 /**
  * Settings page for the Gumroad Coupons tab in CF7.
  * 
- * @package CF7Gumroad\Admin
+ * @package CouponFlow\CF7Gumroad\Admin
  */
 
 declare( strict_types=1 );
 
-namespace CF7Gumroad\Admin;
+namespace CouponFlow\CF7Gumroad\Admin;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -210,10 +210,10 @@ class SettingsPage {
 			return;
 		}
 
-		wp_enqueue_script( 'cf7g-admin', CGC_URL . 'assets/js/admin.js', array( 'jquery' ), CGC_VERSION, true );
+		wp_enqueue_script( 'cf7g-admin', COUPONFLOW_URL . 'assets/js/admin.js', array( 'jquery' ), COUPONFLOW_VERSION, true );
 		wp_localize_script(
 			'cf7g-admin',
-			'CGC',
+			'COUPONFLOW',
 			array(
 				'ajax' => admin_url( 'admin-ajax.php' ),
 			)

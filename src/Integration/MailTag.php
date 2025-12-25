@@ -3,12 +3,12 @@
 /**
  * Registers the [cf7g_coupon_code] tag for Contact Form 7.
  * 
- * @package CF7Gumroad\Integration
+ * @package CouponFlow\CF7Gumroad\Integration
  */
 
 declare( strict_types=1 );
 
-namespace CF7Gumroad\Integration;
+namespace CouponFlow\CF7Gumroad\Integration;
 
 defined( 'ABSPATH' ) || exit;
 

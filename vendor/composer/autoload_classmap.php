@@ -6,11 +6,11 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CF7Gumroad\\Admin\\AjaxController' => $baseDir . '/src/Admin/AjaxController.php',
-    'CF7Gumroad\\Admin\\SettingsPage' => $baseDir . '/src/Admin/SettingsPage.php',
-    'CF7Gumroad\\Api\\GumroadAPI' => $baseDir . '/src/Api/GumroadAPI.php',
-    'CF7Gumroad\\Integration\\CouponHandler' => $baseDir . '/src/Integration/CouponHandler.php',
-    'CF7Gumroad\\Integration\\MailTag' => $baseDir . '/src/Integration/MailTag.php',
-    'CF7Gumroad\\Support\\Helpers' => $baseDir . '/src/Support/Helpers.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'CouponFlow\\CF7Gumroad\\Admin\\AjaxController' => $baseDir . '/src/Admin/AjaxController.php',
+    'CouponFlow\\CF7Gumroad\\Admin\\SettingsPage' => $baseDir . '/src/Admin/SettingsPage.php',
+    'CouponFlow\\CF7Gumroad\\Api\\GumroadAPI' => $baseDir . '/src/Api/GumroadAPI.php',
+    'CouponFlow\\CF7Gumroad\\Integration\\CouponHandler' => $baseDir . '/src/Integration/CouponHandler.php',
+    'CouponFlow\\CF7Gumroad\\Integration\\MailTag' => $baseDir . '/src/Integration/MailTag.php',
+    'CouponFlow\\CF7Gumroad\\Support\\Helpers' => $baseDir . '/src/Support/Helpers.php',
 );

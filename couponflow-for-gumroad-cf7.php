@@ -27,16 +27,15 @@
 defined( 'ABSPATH' ) || exit;
 
 // Define plugin constants.
-define( 'CGC_VERSION', '1.0.0' );
-define( 'CGC_PATH', plugin_dir_path( __FILE__ ) );
-define( 'CGC_URL', plugin_dir_url( __FILE__ ) );
+define( 'COUPONFLOW_VERSION', '1.0.0' );
+define( 'COUPONFLOW_PATH', plugin_dir_path( __FILE__ ) );
+define( 'COUPONFLOW_URL', plugin_dir_url( __FILE__ ) );
 
 // Check for Composer autoload.
-if ( ! file_exists( CGC_PATH . 'vendor/autoload.php' ) ) {
+if ( ! file_exists( COUPONFLOW_PATH . 'vendor/autoload.php' ) ) {
   return;
 }
-// Load Composer autoload.
-require_once CGC_PATH . 'vendor/autoload.php';
+require_once COUPONFLOW_PATH . 'vendor/autoload.php';
 
 // Environment Checks
 add_action(
@@ -73,15 +72,15 @@ add_action(
 
 		// Load admin-side logic only in dashboard.
 		if ( is_admin() ) {
-			\CF7Gumroad\Admin\SettingsPage::init();
-			\CF7Gumroad\Admin\AjaxController::init();
+			\CouponFlow\CF7Gumroad\Admin\SettingsPage::init();
+			\CouponFlow\CF7Gumroad\Admin\AjaxController::init();
 		}
 
 		// Always load CF7 integration layer.
-		\CF7Gumroad\Integration\MailTag::init();
-		\CF7Gumroad\Integration\CouponHandler::init();
+		\CouponFlow\CF7Gumroad\Integration\MailTag::init();
+		\CouponFlow\CF7Gumroad\Integration\CouponHandler::init();
 	}
 );
 
 // Helpers
-require_once CGC_PATH . 'src/Support/Helpers.php';
+require_once COUPONFLOW_PATH . 'src/Support/Helpers.php';

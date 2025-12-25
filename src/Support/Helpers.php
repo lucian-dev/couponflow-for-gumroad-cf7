@@ -1,6 +1,6 @@
 <?php
 
-namespace CF7Gumroad\Support;
+namespace CouponFlow\CF7Gumroad\Support;
 
 defined( 'ABSPATH' ) || exit;
 

@@ -9,25 +9,25 @@ class ComposerStaticInit3be710c24dd4e9869406632b93b6c67d
     public static $prefixLengthsPsr4 = array (
         'C' =>
         array (
-            'CF7Gumroad\\' => 11,
+            'CouponFlow\\CF7Gumroad\\' => 22,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'CF7Gumroad\\' =>
+        'CouponFlow\\CF7Gumroad\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
     public static $classMap = array (
-        'CF7Gumroad\\Admin\\AjaxController' => __DIR__ . '/../..' . '/src/Admin/AjaxController.php',
-        'CF7Gumroad\\Admin\\SettingsPage' => __DIR__ . '/../..' . '/src/Admin/SettingsPage.php',
-        'CF7Gumroad\\Api\\GumroadAPI' => __DIR__ . '/../..' . '/src/Api/GumroadAPI.php',
-        'CF7Gumroad\\Integration\\CouponHandler' => __DIR__ . '/../..' . '/src/Integration/CouponHandler.php',
-        'CF7Gumroad\\Integration\\MailTag' => __DIR__ . '/../..' . '/src/Integration/MailTag.php',
-        'CF7Gumroad\\Support\\Helpers' => __DIR__ . '/../..' . '/src/Support/Helpers.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'CouponFlow\\CF7Gumroad\\Admin\\AjaxController' => __DIR__ . '/../..' . '/src/Admin/AjaxController.php',
+        'CouponFlow\\CF7Gumroad\\Admin\\SettingsPage' => __DIR__ . '/../..' . '/src/Admin/SettingsPage.php',
+        'CouponFlow\\CF7Gumroad\\Api\\GumroadAPI' => __DIR__ . '/../..' . '/src/Api/GumroadAPI.php',
+        'CouponFlow\\CF7Gumroad\\Integration\\CouponHandler' => __DIR__ . '/../..' . '/src/Integration/CouponHandler.php',
+        'CouponFlow\\CF7Gumroad\\Integration\\MailTag' => __DIR__ . '/../..' . '/src/Integration/MailTag.php',
+        'CouponFlow\\CF7Gumroad\\Support\\Helpers' => __DIR__ . '/../..' . '/src/Support/Helpers.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

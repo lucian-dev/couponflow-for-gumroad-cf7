@@ -3,14 +3,14 @@
 /**
  * Handles coupon creation when a CF7 form is submitted.
  * 
- * @package CF7Gumroad\Integration
+ * @package CouponFlow\CF7Gumroad\Integration
  */
 
 declare( strict_types=1 );
 
-namespace CF7Gumroad\Integration;
+namespace CouponFlow\CF7Gumroad\Integration;
 
-use CF7Gumroad\Api\GumroadAPI;
+use CouponFlow\CF7Gumroad\Api\GumroadAPI;
 
 defined( 'ABSPATH' ) || exit;
 

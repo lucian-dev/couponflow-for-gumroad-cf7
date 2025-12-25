@@ -3,12 +3,12 @@
 /**
  * Handles direct communication with the Gumroad API.
  * 
- * @package CF7Gumroad\Api
+ * @package CouponFlow\CF7Gumroad\Api
  */
 
 declare( strict_types=1 );
 
-namespace CF7Gumroad\Api;
+namespace CouponFlow\CF7Gumroad\Api;
 
 defined( 'ABSPATH' ) || exit;
 

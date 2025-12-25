@@ -2,14 +2,14 @@
 /**
  * AJAX endpoints for the CF7 Gumroad admin (authenticated, wp-admin only).
  * 
- * @package CF7Gumroad\Admin
+ * @package CouponFlow\CF7Gumroad\Admin
  */
 
 declare( strict_types=1 );
 
-namespace CF7Gumroad\Admin;
+namespace CouponFlow\CF7Gumroad\Admin;
 
-use CF7Gumroad\Support\Helpers;
+use CouponFlow\CF7Gumroad\Support\Helpers;
 
 defined( 'ABSPATH' ) || exit;
 

@@ -22,7 +22,7 @@
 
       showSpinner($checkBtn, true);
 
-      $.post(CGC.ajax, {
+      $.post(COUPONFLOW.ajax, {
         action: 'cf7g_check_connection',
         nonce: nonce,
         form_id: formId,
@@ -56,7 +56,7 @@
 
       showSpinner($resetBtn, true);
 
-      $.post(CGC.ajax, {
+      $.post(COUPONFLOW.ajax, {
         action: 'cf7g_reset_connection',
         nonce: nonce,
         form_id: formId,
